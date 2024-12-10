@@ -14,4 +14,6 @@ public interface IStudentService {
 
     public Boolean deleteUser(Integer id);
 
+    public Student updateStudent(Integer id, Student updateStudentData);
+
 }
