@@ -2,6 +2,9 @@ package com.ilkayaltinisik.entites;
 
 import java.sql.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.Column;
@@ -32,7 +35,7 @@ public class Student {
     @Column(name = "last_name", nullable = false)
     private String lastName;
 
-    @JsonFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(iso = ISO.DATE)
     @Column(name = "birth_of_date", nullable = true)
     private Date birthOfDate;
 
