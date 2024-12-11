@@ -2,18 +2,20 @@ package com.ilkayaltinisik.services;
 
 import java.util.List;
 
+import com.ilkayaltinisik.dto.DtoStudent;
+import com.ilkayaltinisik.dto.DtoStudentIU;
 import com.ilkayaltinisik.entites.Student;
 
 public interface IStudentService {
 
-    public Student saveStudent(Student student);
+    public DtoStudent saveStudent(DtoStudentIU student);
 
-    public List<Student> getAllStudent();
+    public List<DtoStudent> getAllStudent();
 
-    public Student getStudentByID(Integer id);
+    public DtoStudent getStudentByID(Integer id);
 
     public Boolean deleteUser(Integer id);
 
-    public Student updateStudent(Integer id, Student updateStudentData);
+    public DtoStudent updateStudent(Integer id, DtoStudentIU updateStudentData);
 
 }

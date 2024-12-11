@@ -2,17 +2,18 @@ package com.ilkayaltinisik.controller;
 
 import java.util.List;
 
-import com.ilkayaltinisik.entites.Student;
+import com.ilkayaltinisik.dto.DtoStudent;
+import com.ilkayaltinisik.dto.DtoStudentIU;
 
 public interface IStudentController {
 
-    public Student saveStudent(Student student);
+    public DtoStudent saveStudent(DtoStudentIU dtoStudentIU);
 
-    public List<Student> getAllStudent();
+    public List<DtoStudent> getAllStudent();
 
-    public Student getStudentById(Integer id);
+    public DtoStudent getStudentById(Integer id);
 
     public Boolean deleteUser(Integer id);
 
-    public Student updateStudent(Integer id, Student updateStudentData);
+    public DtoStudent updateStudent(Integer id, DtoStudentIU dtoStudentIU);
 }
